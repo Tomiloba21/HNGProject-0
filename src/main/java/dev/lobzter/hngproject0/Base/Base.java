@@ -1,4 +1,4 @@
-package dev.lobzter.hngproject0;
+package dev.lobzter.hngproject0.Base;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
