@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @RestController
@@ -22,13 +22,13 @@ public class Public {
     @GetMapping("/")
     public Map<String, String> getPublicData(){
 
-        Map<String, String> publicData = new HashMap<>();
+        Map<String, String> publicData = new LinkedHashMap<>();
         LocalDateTime dateTime = LocalDateTime.now();
         String iso = dateTime.format(DateTimeFormatter.ISO_DATE_TIME);
 
-        publicData.put("Email Address", base.getEmailAddress() );
-        publicData.put("Current Date", iso );
-        publicData.put("Github Url", base.getGitUrl() );
+        publicData.put("email", base.getEmailAddress() );
+        publicData.put("current_datetime", iso );
+        publicData.put("github_url", base.getGitUrl() );
         return publicData;
 
     }
