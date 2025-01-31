@@ -4,7 +4,8 @@ A Simple REST API that returns a JSON object of the Programmer Credentials
 
 ## About HNG
 
-This project was developed as part of the HNG Internship program. For more information about hiring talented Java developers like myself, please visit [HNG Java Developers](https://hng.tech/hire/java-developers).
+This project was developed as part of the HNG Internship program. For more information about hiring talented
+Java developers like myself, please visit [HNG Java Developers](https://hng.tech/hire/java-developers).
 
 ## Features
 
@@ -34,7 +35,8 @@ After building the project, you can run the application using the following comm
 
 ```
 
-The application will start on http://localhost:8080.
+[The application will start on this url](http://localhost:8080) (locally) or 
+[Here](https://hngproject-0.up.railway.app/)(production)
 
 ***request***
 ```bash
