@@ -1,5 +1,13 @@
 # HNGProject-0
 
+A Simple REST API that returns a JSON object of the Programmer Credentials
+
+## About HNG
+
+This project was developed as part of the HNG Internship program. For more information about hiring talented Java developers like myself, please visit [HNG Java Developers](https://hng.tech/hire/java-developers).
+
+## Features
+
 THis REST API returns a JSON object of
 
 ## Requirements
@@ -31,3 +39,4 @@ The application will start on http://localhost:8080.
 
 # API ENDPOINTS
 http://localhost:8080/ returns the JSON Object
+

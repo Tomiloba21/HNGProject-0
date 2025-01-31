@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -13,7 +15,7 @@ import java.util.Map;
 @CrossOrigin("*")
 public class Public {
 
-    private final   Base base;
+    private final Base base;
 
     public Public(Base base) {
         this.base = base;
@@ -23,8 +25,7 @@ public class Public {
     public Map<String, String> getPublicData(){
 
         Map<String, String> publicData = new LinkedHashMap<>();
-        LocalDateTime dateTime = LocalDateTime.now();
-        String iso = dateTime.format(DateTimeFormatter.ISO_DATE_TIME);
+        String iso = Instant.now().atOffset(ZoneOffset.UTC).format(DateTimeFormatter.ISO_INSTANT);
 
         publicData.put("email", base.getEmailAddress() );
         publicData.put("current_datetime", iso );
