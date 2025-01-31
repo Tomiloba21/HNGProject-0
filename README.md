@@ -36,7 +36,20 @@ After building the project, you can run the application using the following comm
 
 The application will start on http://localhost:8080.
 
+***request***
+```bash
+curl --request GET -sL \
+     --url 'http://localhost:8080'\
+```
 
-# API ENDPOINTS
-http://localhost:8080/ returns the JSON Object
+***response***  
+
+```json
+{
+      "email": "lobzter23@gmail.com",
+      "current_datetime": "2025-01-31T23:02:39.585344442Z",
+      "github_url": "https://github.com/Tomiloba21/HNGProject-0"
+}
+```
+
 
