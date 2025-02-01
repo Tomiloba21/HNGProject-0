@@ -1,11 +1,10 @@
 package dev.lobzter.hngproject0.controller;
 import dev.lobzter.hngproject0.Base.Base;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
@@ -22,6 +21,7 @@ public class Public {
     }
 
     @GetMapping("/")
+    @ResponseStatus(HttpStatus.OK)
     public Map<String, String> getPublicData(){
 
         Map<String, String> publicData = new LinkedHashMap<>();
